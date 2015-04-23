@@ -16,6 +16,7 @@
 		94420FDC1AE6943A00020B5E /* FlickrPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94420FDB1AE6943A00020B5E /* FlickrPhotosViewController.swift */; };
 		94420FDE1AE6974700020B5E /* FlickrSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94420FDD1AE6974700020B5E /* FlickrSearcher.swift */; };
 		948586251AE7A4A500073D2A /* FlickrPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948586241AE7A4A500073D2A /* FlickrPhotoCell.swift */; };
+		948586271AE7AB3A00073D2A /* FlickrPhotoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948586261AE7AB3A00073D2A /* FlickrPhotoHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		94420FDB1AE6943A00020B5E /* FlickrPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhotosViewController.swift; sourceTree = "<group>"; };
 		94420FDD1AE6974700020B5E /* FlickrSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrSearcher.swift; sourceTree = "<group>"; };
 		948586241AE7A4A500073D2A /* FlickrPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhotoCell.swift; sourceTree = "<group>"; };
+		948586261AE7AB3A00073D2A /* FlickrPhotoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhotoHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				94420FDB1AE6943A00020B5E /* FlickrPhotosViewController.swift */,
 				94420FDD1AE6974700020B5E /* FlickrSearcher.swift */,
 				948586241AE7A4A500073D2A /* FlickrPhotoCell.swift */,
+				948586261AE7AB3A00073D2A /* FlickrPhotoHeaderView.swift */,
 			);
 			path = FlickrSearch;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				948586251AE7A4A500073D2A /* FlickrPhotoCell.swift in Sources */,
 				94420FBC1AE6922900020B5E /* AppDelegate.swift in Sources */,
 				94420FDE1AE6974700020B5E /* FlickrSearcher.swift in Sources */,
+				948586271AE7AB3A00073D2A /* FlickrPhotoHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -342,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

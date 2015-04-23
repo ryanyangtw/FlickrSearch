@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-let apiKey = "5a834a3b64718362d8b034355fba3bfe"
+//5a834a3b64718362d8b034355fba3bfe
+let apiKey = "API KEY"
 
 struct FlickrSearchResults {
   let searchTerm : String
@@ -18,6 +19,7 @@ struct FlickrSearchResults {
 
 class FlickrPhoto : Equatable {
   var thumbnail : UIImage?
+  // 一開始不會抓大圖，等使用者點擊後才會真的去抓
   var largeImage : UIImage?
   let photoID : String
   let farm : Int

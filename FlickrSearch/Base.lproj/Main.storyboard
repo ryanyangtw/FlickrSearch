@@ -14,7 +14,7 @@
                         <color key="backgroundColor" red="0.16762008940000001" green="0.69636400509999996" blue="0.75699943439999995" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v3n-Fc-RIC">
                             <size key="itemSize" width="200" height="200"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="90"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
@@ -29,20 +29,46 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8HY-U4-wyl">
                                             <rect key="frame" x="5" y="5" width="190" height="190"/>
                                         </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="whi-C0-2B8">
+                                            <rect key="frame" x="82" y="81" width="37" height="37"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="whi-C0-2B8" secondAttribute="centerY" id="LR9-sE-e9y"/>
                                     <constraint firstAttribute="trailing" secondItem="8HY-U4-wyl" secondAttribute="trailing" constant="5" id="aeW-Fw-Tou"/>
                                     <constraint firstItem="8HY-U4-wyl" firstAttribute="top" secondItem="dQJ-w4-OD0" secondAttribute="top" constant="5" id="ckq-j0-YJq"/>
                                     <constraint firstItem="8HY-U4-wyl" firstAttribute="leading" secondItem="dQJ-w4-OD0" secondAttribute="leading" constant="5" id="lFK-iz-5X0"/>
                                     <constraint firstAttribute="bottom" secondItem="8HY-U4-wyl" secondAttribute="bottom" constant="5" id="v5a-yi-DMd"/>
+                                    <constraint firstAttribute="centerX" secondItem="whi-C0-2B8" secondAttribute="centerX" id="vpP-WG-HZx"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="whi-C0-2B8" id="uS3-0p-eGU"/>
                                     <outlet property="imageView" destination="8HY-U4-wyl" id="KPH-8X-Ksj"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrPhotoHeaderView" id="3Vz-2r-nLm" customClass="FlickrPhotoHeaderView" customModule="FlickrSearch" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8v-qB-MdT">
+                                    <rect key="frame" x="262" y="25" width="77" height="39"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="centerY" secondItem="H8v-qB-MdT" secondAttribute="centerY" id="6LJ-3x-LPc"/>
+                                <constraint firstAttribute="centerX" secondItem="H8v-qB-MdT" secondAttribute="centerX" id="JmB-O6-meG"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="H8v-qB-MdT" id="0u1-th-Jq2"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="lPB-22-sgs" id="FfL-9I-kfR"/>
                             <outlet property="delegate" destination="lPB-22-sgs" id="Coi-cO-8x5"/>
@@ -59,6 +85,11 @@
                                 <outlet property="delegate" destination="lPB-22-sgs" id="5tH-yE-dy2"/>
                             </connections>
                         </textField>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dMz-a1-srK">
+                            <connections>
+                                <action selector="share:" destination="lPB-22-sgs" id="DrZ-x7-8h9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQ4-9C-XwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
